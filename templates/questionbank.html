@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/QIcon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Q-Pedict</title>
+</head>
+<body>
+    <nav style="position: fixed; width: 100%;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Q-Predict</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact us</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div style="min-height: 100vh; background-color: #333333; padding: 20px 0px 20px 0px;">
+        <div style="display: flex; justify-content: center; width: 60%; margin: auto; padding: 10px; background-color: white;">
+            <main>
+                {% block content %}
+                    <center><h2>Question Bank</h2></center>
+                    <center><h6>-----------------------------------</h6></center>
+                    <center><h4>Artificial Intelligence (310253)</h4></center>
+                    <ol>
+                        {% for question in questions %}
+                            <li>
+                                <ul>
+                                {% for item in question %}
+                                    <li>{{ item.0 }} <b>[{{ item.1 }}]</b></li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+</body>
+</html>

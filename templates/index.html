@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/QIcon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Q-Pedict</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Q-Predict</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact us</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div style="min-height: 91vh; background-color: #333333; padding-top:30vh;">
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly; background-color: white; margin: auto; height: 30vh; width: 80vh; border-radius: 10px;">
+            <center><h5>Choose the Subject</h5></center>
+            <center><select name="my-select" id="my-select">
+                <option value="option1">Artifitial Intelligence (310253)</option>
+            </select></center>
+            <div style="display: flex; justify-content: space-evenly;">
+                <a href="/questionbank"><input style="background-color: #198754; padding: 1vh; border: none; border-radius: 10px;" type="button" value="Question Bank"></a>
+                <a href="/questionpaper"><input style="background-color: #198754; padding: 1vh; border: none; border-radius: 10px;" type="button" value="Predicted Question Paper"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
